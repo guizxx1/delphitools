@@ -21,6 +21,7 @@ import {
   Crop,
   Square,
   GalleryVertical,
+  Stamp,
 } from "lucide-react";
 
 export interface Tool {
@@ -62,6 +63,40 @@ export const toolCategories: ToolCategory[] = [
         description: "Split images for Instagram carousel scrolls",
         icon: GalleryVertical,
         href: "/tools/scroll-generator",
+      },
+      {
+        id: "watermarker",
+        name: "Watermarker",
+        description: "Add watermarks to images",
+        icon: Stamp,
+        href: "/tools/watermarker",
+      },
+    ],
+  },
+  {
+    id: "colour",
+    name: "Colour",
+    tools: [
+      {
+        id: "colour-converter",
+        name: "Colour Converter",
+        description: "Convert between colour formats",
+        icon: Pipette,
+        href: "/tools/colour-converter",
+      },
+      {
+        id: "tailwind-shades",
+        name: "Tailwind Shade Generator",
+        description: "Generate Tailwind colour scales",
+        icon: Palette,
+        href: "/tools/tailwind-shades",
+      },
+      {
+        id: "harmony-genny",
+        name: "Harmony Generator",
+        description: "Generate colour harmonies",
+        icon: Rainbow,
+        href: "/tools/harmony-genny",
       },
     ],
   },
@@ -158,33 +193,6 @@ export const toolCategories: ToolCategory[] = [
         description: "Explore font file contents",
         icon: FileType,
         href: "/tools/font-explorer",
-      },
-    ],
-  },
-  {
-    id: "colour",
-    name: "Colour",
-    tools: [
-      {
-        id: "colour-converter",
-        name: "Colour Converter",
-        description: "Convert between colour formats",
-        icon: Pipette,
-        href: "/tools/colour-converter",
-      },
-      {
-        id: "tailwind-shades",
-        name: "Tailwind Shade Generator",
-        description: "Generate Tailwind colour scales",
-        icon: Palette,
-        href: "/tools/tailwind-shades",
-      },
-      {
-        id: "harmony-genny",
-        name: "Harmony Generator",
-        description: "Generate colour harmonies",
-        icon: Rainbow,
-        href: "/tools/harmony-genny",
       },
     ],
   },

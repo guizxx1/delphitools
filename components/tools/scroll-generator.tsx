@@ -104,6 +104,12 @@ export function ScrollGeneratorTool() {
 
       const { tileWidth, tileHeight, slideCount, needsFill } = tileInfo;
       const totalTileWidth = tileWidth * slideCount;
+
+      // Calculate the fill needed on edges only
+      const totalFill = totalTileWidth - imageSize.width;
+      const fillPerSide = totalFill / 2; // Left edge of first, right edge of last
+
+      // Each tile shows (imageWidth / slideCount) of the source
       const sourceWidthPerTile = imageSize.width / slideCount;
 
       const newTiles: Tile[] = [];
@@ -113,8 +119,11 @@ export function ScrollGeneratorTool() {
         canvas.height = tileHeight;
         ctx.clearRect(0, 0, tileWidth, tileHeight);
 
-        if (needsFill) {
-          // Need to add fill (pillarboxing or cropping handled by fill)
+        const isFirst = col === 0;
+        const isLast = col === slideCount - 1;
+
+        if (needsFill && (isFirst || isLast)) {
+          // Only add fill background on first/last tiles
           if (fillMode === "color") {
             ctx.fillStyle = fillColor;
             ctx.fillRect(0, 0, tileWidth, tileHeight);
@@ -137,36 +146,34 @@ export function ScrollGeneratorTool() {
             );
             ctx.filter = "none";
           }
-
-          // Draw the actual image slice centered
-          const drawWidth = Math.min(tileWidth, sourceWidthPerTile);
-          const drawX = (tileWidth - drawWidth) / 2;
-
-          ctx.drawImage(
-            img,
-            col * sourceWidthPerTile,
-            0,
-            sourceWidthPerTile,
-            img.height,
-            drawX,
-            0,
-            drawWidth,
-            tileHeight
-          );
-        } else {
-          // Perfect fit - just slice the image
-          ctx.drawImage(
-            img,
-            col * sourceWidthPerTile,
-            0,
-            sourceWidthPerTile,
-            img.height,
-            0,
-            0,
-            tileWidth,
-            tileHeight
-          );
         }
+
+        // Calculate where to draw the image slice
+        let drawX = 0;
+        let sourceX = col * sourceWidthPerTile;
+
+        if (needsFill) {
+          if (isFirst) {
+            // First tile: image starts after the left fill
+            drawX = fillPerSide;
+          } else if (isLast) {
+            // Last tile: image starts at 0, ends before right fill
+            drawX = 0;
+          }
+          // Middle tiles: no offset, seamless
+        }
+
+        ctx.drawImage(
+          img,
+          sourceX,
+          0,
+          sourceWidthPerTile,
+          img.height,
+          drawX,
+          0,
+          sourceWidthPerTile,
+          tileHeight
+        );
 
         newTiles.push({
           index: col,

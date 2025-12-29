@@ -30,6 +30,7 @@ const toolComponents: Record<string, React.ComponentType> = {
   "social-cropper": dynamic(() => import("@/components/tools/social-cropper").then(mod => mod.SocialCropperTool)),
   "matte-generator": dynamic(() => import("@/components/tools/matte-generator").then(mod => mod.MatteGeneratorTool)),
   "scroll-generator": dynamic(() => import("@/components/tools/scroll-generator").then(mod => mod.ScrollGeneratorTool)),
+  "watermarker": dynamic(() => import("@/components/tools/watermarker").then(mod => mod.WatermarkerTool)),
 };
 
 interface ToolPageProps {
